@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>アドレス帳</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- css -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap.vertical-tabs.css" rel="stylesheet">
+	<link href="script/layout.css" rel="stylesheet">
+
+	<!-- js -->
+	<script type="text/javascript" src="script/event.js"></script>
+	<script type="text/javascript" src="script/script.js"></script>
+	<script type="text/javascript" src="script/layout.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div id="menu_div" class="btn-toolbar" role="toolbar">
+		<div class="btn-group" role="group">
+			<button type="button" class="btn btn-default" onclick="onClickGroupAddBtn();">Ａ</button>
+			<button type="button" class="btn btn-default">Ｂ</button>
+			<button type="button" class="btn btn-default">Ｃ</button>
+		</div>
+		<div class="btn-group" role="group">
+			<button type="button" class="btn btn-default">Ｄ</button>
+			<button type="button" class="btn btn-default">Ｅ</button>
+		</div>
+		<div class="btn-group" role="group">
+			<button type="button" class="btn btn-default">Ｆ</button>
+			<button type="button" class="btn btn-default">Ｇ</button>
+			<button type="button" class="btn btn-default">Ｈ</button>
+		</div>
+	</div>
+
+	<div id="contents_outer_div">
+		<!-- 左ペイン -->
+		<div id="left_div">
+			<div id="left_header_div">
+				<select id="group_select" class="form-control">
+					<option value="Home" selected>美紀子 - 仕事</option>
+					<option value="Office">美紀子 - プライベート</option>
+					<option value="Origin">武和</option>
+				</select>
+			</div>
+			<div id="left_contents_div" class="no_disp_scrollbar">
+				<div id="person_select_div">
+					<!-- Nav tabs -->
+					<ul id="person_select_tab_outer" class="nav nav-tabs tabs-left"><!-- 'tabs-right' for right tabs -->
+						<li class="active"><a href="" data-toggle="tab">山本　次郎</a></li>
+						<li><a href="" onclick="alert('aa')" data-toggle="tab">佐藤　大二郎</a></li>
+						<li><a href="" data-toggle="tab">竹ノ内　太郎</a></li>
+						<li><a href="" data-toggle="tab">榊　武和</a></li>
+					</ul>
+				</div>
+			</div>		
+		</div>
+
+		<!-- 右ペイン -->
+		<div id="right_div">
+			<div id="rigth_header_div">
+				<ul id="element_select_ui" class="nav nav-tabs">
+					<li class="active"><a href="#element_1" data-toggle="tab">氏名、住所</a></li>
+					<li><a href="#element_2" data-toggle="tab">勤務先、連絡先</a></li>
+				</ul>
+			</div>
+			<div id="rigth_contents_div" class="tab-content no_disp_scrollbar">
+				<div id="element_1" class="tab-pane active">
+					<ul class="list-group">
+						<li class="list-group-item contact_header">
+							氏名
+						</li>
+						<li class="list-group-item">
+							<div class="input-group">
+								<span class="input-group-addon">氏</span>
+								<input type="text" class="form-control" placeholder="">
+							</div>
+						</li>
+						<li class="list-group-item">
+							<div class="input-group">
+								<span class="input-group-addon">名</span>
+								<input type="text" class="form-control" placeholder="">
+							</div>
+						</li>
+
+						<li class="list-group-item contact_header">
+							住所
+						</li>
+						<li class="list-group-item">
+							<div class="input-group">
+								<span class="input-group-addon">種別</span>
+								<select class="form-control">
+									<option value="Home" selected>自宅</option>
+									<option value="Office">勤務先</option>
+									<option value="Origin">実家</option>
+									<option value="Others">その他</option>
+									<option value="Unknown">不明</option>
+								</select>
+							</div>
+						</li>
+						<li class="list-group-item">
+							<div class="input-group">
+								<span class="input-group-addon">郵便番号</span>
+								<input type="text" class="form-control" placeholder="">
+							</div>
+						</li>
+						<li class="list-group-item">
+							<div class="input-group">
+								<span class="input-group-addon">都道府県</span>
+								<input type="text" class="form-control" placeholder="">
+							</div>
+						</li>
+						<li class="list-group-item">
+							<div class="input-group">
+								<span class="input-group-addon">市町村</span>
+								<input type="text" class="form-control" placeholder="">
+							</div>
+						</li>
+						<li class="list-group-item">
+							<div class="input-group">
+								<span class="input-group-addon">町名</span>
+								<input type="text" class="form-control" placeholder="">
+							</div>
+						</li>
+						<li class="list-group-item">
+							<div class="input-group">
+								<span class="input-group-addon">番地</span>
+								<input type="text" class="form-control" placeholder="">
+							</div>
+						</li>
+						<li class="list-group-item">
+							<div class="input-group">
+								<span class="input-group-addon">建物名</span>
+								<input type="text" class="form-control" placeholder="">
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div id="element_2" class="tab-pane">
+					<ul class="list-group">
+						<li class="list-group-item contact_header">
+							勤務先
+						</li>
+						<li class="list-group-item">
+							<div class="input-group">
+								<span class="input-group-addon">勤務先</span>
+								<input type="text" class="form-control" placeholder="">
+							</div>
+						</li>
+						<li class="list-group-item">
+							<div class="input-group">
+								<span class="input-group-addon">部署</span>
+								<input type="text" class="form-control" placeholder="">
+							</div>
+						</li>
+						<li class="list-group-item">
+							<div class="input-group">
+								<span class="input-group-addon">役職</span>
+								<input type="text" class="form-control" placeholder="">
+							</div>
+						</li>
+
+						<li class="list-group-item contact_header">
+							連絡先
+						</li>
+						<li class="list-group-item">
+							<div class="input-group">
+								<span class="input-group-addon">種別</span>
+								<select class="form-control">
+									<option value="Phone" selected>電話</option>
+									<option value="Fax">Ｆａｘ</option>
+									<option value="Cellular">携帯電話</option>
+									<option value="Pager">ポケベル</option>
+									<option value="Others">その他</option>
+									<option value="Unknown">不明</option>
+								</select>
+							</div>
+						</li>
+						<li class="list-group-item">
+							<div class="input-group">
+								<span class="input-group-addon">電話番号</span>
+								<input type="text" class="form-control" placeholder="">
+							</div>
+						</li>
+						<li class="list-group-item">
+							<div class="input-group">
+								<span class="input-group-addon">用途</span>
+								<select class="form-control">
+									<option value="Official" selected>業務用</option>
+									<option value="Private">個人用</option>
+									<option value="Others">その他</option>
+									<option value="Unknown">不明</option>
+								</select>
+							</div>
+						</li>
+						<li class="list-group-item">
+							<div class="input-group">
+								<span class="input-group-addon">eMail</span>
+								<input type="text" class="form-control" placeholder="">
+							</div>
+						</li>
+						<li class="list-group-item">
+							<div class="input-group">
+								<span class="input-group-addon">種別</span>
+								<select class="form-control">
+									<option value="PC" selected>パソコン</option>
+									<option value="Cellular">携帯電話</option>
+									<option value="PDA">ＰＤＡ</option>
+									<option value="Others">その他</option>
+									<option value="Unknown">不明</option>
+								</select>
+							</div>
+						</li>
+						<li class="list-group-item contact_header">
+							Ｗｅｂ
+						</li>
+						<li class="list-group-item">
+							<div class="input-group">
+								<span class="input-group-addon">ＵＲＬ</span>
+								<input type="text" class="form-control" placeholder="">
+								<span class="input-group-btn">
+									<button type="button" class="btn btn-default">確認</button>
+								</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-4 bg-info" style="height: 100vh;">メニュー</div>
+			<div class="col-xs-8 bg-bg-info" style="height: 100vh; overflow-y: scroll;">
+				<div class="container-fluid">
+					<div class="bg-danger"style="height: 5em;">ヘッダー</div>
+					<div class="bg-success"style="height: 200vh;">コンテンツ</div>
+				</div>
+			</div>
+		</div>
+	</div>
+-->
+</body>
+</html>
